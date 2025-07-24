@@ -16,7 +16,7 @@ const nums = [13, 87, 2, 89, 12, 4, 90, 63];
 const numsTimesTwo = nums.map((number) => {
     return number * 2;
 })
-// console.log(numsTimesTwo)
+console.log(numsTimesTwo)
 
 
 // ! Exercise 2:
@@ -35,8 +35,8 @@ const pizzaToppings = ['Pineapple', 'Olives', 'Anchovies'];
 
 const [firstIngredient, secondIngredient] = pizzaToppings
 
-// console.log('First Ingredient:', firstIngredient)
-// console.log('Second Ingredient:', secondIngredient)
+console.log('First Ingredient:', firstIngredient)
+console.log('Second Ingredient:', secondIngredient)
 
 
 // ! Exercise 3:
@@ -56,8 +56,8 @@ const car = {
 
 const { make, model } = car
 
-// console.log('make:', make)
-// console.log('model:', model)
+console.log('make:', make)
+console.log('model:', model)
 
 
 // ! Exercise 4: 
@@ -74,7 +74,7 @@ const morePizzaToppings = ['Cheese', 'Sauce'];
 
 const uncontroversialPizzaToppings = [...morePizzaToppings]
 
-// console.log(uncontroversialPizzaToppings)
+console.log(uncontroversialPizzaToppings)
 
 
 // ! Exercise 5:
@@ -99,8 +99,8 @@ const myCar = { ...anotherCar }
 myCar.make = 'Ford';
 myCar.model = 'Mustang';
 
-// console.log('Original:', anotherCar)
-// console.log('Clone:', myCar)
+console.log('Original:', anotherCar)
+console.log('Clone:', myCar)
 
 
 // ! Exercise 6:
@@ -120,7 +120,7 @@ const propertyName = 'username';
 const userProfile = {
     [propertyName]: 'Donovan',
 }
-// console.log(userProfile)
+console.log(userProfile)
 
 
 
@@ -140,8 +140,8 @@ function twoParameterFunction(noun = 'cat', adjective = 'orange') {
     console.log(`The ${noun} is ${adjective}`)
 }
 
-// twoParameterFunction()
-// twoParameterFunction('dog', 'white')
+twoParameterFunction()
+twoParameterFunction('dog', 'white')
 
 
 
@@ -160,7 +160,87 @@ const pizza = 'tasty';
 
 // Your code here:
 
-// console.log(pizza === 'tasty' ? 'yum' : 'yuck')
+console.log(pizza === 'tasty' ? 'yum' : 'yuck')
+
+const myVar = 'myVar'
+const result1 = 'bar' && 'foo';
+// result1 = 'foo'
+const result2 = false || 243;
+// result2 = 243
+const result3 = 42 && false;
+// result 3 = false
+const result4 = myVar || 3000;
+// result 4 = myVar
+
+// console.log('result1:', result1);
+// console.log('result2:', result2);
+// console.log('result3:', result3);
+// console.log('result4:', result4);
+
+
+// ! Exercise 10:
+// ! 10.1: Set language
+// a. Construct a single line of code that assigns a default value using the 
+//    logical OR operator. This line should match the logic of the following 
+//    statement:
+//
+//    "lang is equal to localLangConfig or the default value of English."
+//
+// b. Create a variable called `lang`.
+//
+// c. Assign `lang` the value of localLangConfig or 'en' as a default if 
+//    `localLangConfig is falsy.
+//
+// d. Log the value of `lang` to the console.
+//
+// Your code here (localLangConfig is provided to get you started):
+
+// Simulated language configuration (change this variable to test)
+const localLangConfig = 'null'; // Change to 'es', 'fr', etc., or leave it `null`.
+
+const lang = localLangConfig ? localLangConfig : 'en';
+
+console.log(lang)
+
+
+// ! 10.2: Set website theme
+// Intro: In this exercise, you'll construct a single line of code that assigns 
+//        a default value to a variable named `theme` using the logical OR 
+//        operator. This line should match the logic of the following statement:
+//
+//        "theme is equal to savedUserTheme or the default value of light."
+//
+// a. Create a variable called `theme`.
+//
+// b. Assign `theme` the value of `savedUserTheme` or 'light' as a default.
+//
+// c. Log the value of `theme` to the console.
+//
+// Your code here (`savedUserTheme` is provided to get you started):
+
+// Simulated user theme preference (change this variable to test)
+const savedUserTheme = 'dark'; // Change to 'dark', etc., or leave it `null`.
+
+const theme = savedUserTheme ? savedUserTheme : 'light';
+
+console.log(theme)
+
+
+
+// ! Exercise 11:
+// a. Use optional chaining in a console.log so that a console log of
+//    `adventurer.cat.age` returns `undefined` instead of an error.
+//
+// Starting code (don't modify this):
+
+const adventurer = {
+  name: 'Alice',
+};
+
+// Your code here:
+
+console.log(adventurer.cat?.age || 'undefined')
+
 
 
 
